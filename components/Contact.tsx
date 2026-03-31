@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="w-full py-[120px] flex items-center justify-center px-6">
+    <section className="w-full py-[120px] flex items-center justify-center px-6" id = "contact">
       <div className="flex flex-col items-center gap-10 text-center max-w-3xl mx-auto">
         <h2 className="font-semibold tracking-tight" style={{ fontSize: "64px" }}>
           Let&apos;s talk!

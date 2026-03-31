@@ -31,7 +31,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section className="py-[120px] px-6 max-w-[1200px] mx-auto">
+    <section className="py-[120px] px-6 max-w-[1200px] mx-auto" id="projects">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
         <div>
           <h2 className="text-[40px] font-semibold mb-2">Projects</h2>
@@ -53,12 +53,12 @@ export default function ProjectsSection() {
             style={{ borderRadius: "24px" }}
           >
             <div className={`${project.bgColor} relative overflow-hidden`} style={{ height: "260px" }}>
-              <Image
+              {/*<Image
                 src={project.image}
                 alt={project.name}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              />*/}
             </div>
             <CardContent className="pt-4 px-6 pb-6">
               <CardTitle className="text-[18px] font-semibold">{project.name}</CardTitle>
