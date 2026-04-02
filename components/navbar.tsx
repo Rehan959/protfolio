@@ -55,12 +55,7 @@ export function Navbar() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex fixed top-6 left-1/2 z-50 -translate-x-1/2 w-full max-w-fit">
         <nav
-          className="flex items-center gap-4"
-          style={{
-            background: "#111111",
-            padding: "8px 16px",
-            borderRadius: "999px",
-          }}
+          className="flex items-center gap-4 bg-[#111111] px-4 py-2 rounded-full"
         >
           {navItems.map((item) => {
             const isActive = pathname === item.href;
@@ -90,8 +85,7 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#A1A1AA] hover:text-white hover:bg-white/10 rounded-full"
-              style={{ background: "#111111" }}
+              className="text-[#A1A1AA] hover:text-white hover:bg-white/10 rounded-full bg-[#111111]"
             >
               {isOpen ? (
                 <X className="h-5 w-5" />

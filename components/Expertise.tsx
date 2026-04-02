@@ -62,24 +62,13 @@ export default function Expertise() {
           Expertise
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
           {skills.map((skill) => {
             const IconComponent = skill.icon;
             return (
               <div
                 key={skill.name}
-                className="
-                  group flex flex-col items-center justify-center
-                  p-4
-                  border border-[#222222]
-                  bg-[#111111]
-                  transition-all duration-300
-                  hover:bg-[#1a1a1a]
-                  hover:border-[#333333]
-                  hover:scale-105
-                  cursor-pointer
-                "
-                style={{ borderRadius: "20px" }}
+                className="group flex flex-col items-center justify-center p-4 border border-[#222222] bg-[#111111] transition-all duration-300 hover:bg-[#1a1a1a] hover:border-[#333333] hover:scale-105 cursor-pointer rounded-2xl"
                 title={skill.name}
               >
                 <IconComponent

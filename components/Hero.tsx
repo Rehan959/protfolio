@@ -4,8 +4,7 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-16 md:grid-cols-2 items-center">
         <div className="flex flex-col justify-center gap-8">
           <h1
-            className="text-[88px] font-semibold leading-[1.05] tracking-[-1px] max-w-[600px]"
-            style={{ letterSpacing: "-1px" }}
+            className="text-5xl md:text-7xl lg:text-[88px] font-semibold leading-[1.05] -tracking-tight max-w-[600px]"
           >
             Building Web
             <br />
@@ -28,12 +27,7 @@ export function Hero() {
           </p>
 
           <div
-            className="inline-flex items-center gap-2 text-sm font-medium text-white"
-            style={{
-              background: "#111111",
-              padding: "16px 24px",
-              borderRadius: "999px",
-            }}
+            className="inline-flex items-center gap-2 text-sm font-medium text-white bg-[#111111] px-6 py-4 rounded-full"
           >
             SCROLL DOWN <span>↓</span>
           </div>

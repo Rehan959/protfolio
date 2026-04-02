@@ -49,10 +49,9 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <Card
             key={project.name}
-            className="overflow-hidden group cursor-pointer bg-transparent border-[#222222]"
-            style={{ borderRadius: "24px" }}
+            className="overflow-hidden group cursor-pointer bg-transparent border-[#222222] rounded-3xl"
           >
-            <div className={`${project.bgColor} relative overflow-hidden`} style={{ height: "260px" }}>
+            <div className={`${project.bgColor} relative overflow-hidden h-[260px]`}>
               {/*<Image
                 src={project.image}
                 alt={project.name}

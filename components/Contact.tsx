@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section className="w-full py-[120px] flex items-center justify-center px-6" id = "contact">
       <div className="flex flex-col items-center gap-10 text-center max-w-3xl mx-auto">
-        <h2 className="font-semibold tracking-tight" style={{ fontSize: "64px" }}>
+        <h2 className="font-semibold tracking-tight text-4xl md:text-5xl lg:text-6xl">
           Let&apos;s talk!
         </h2>
 
@@ -26,11 +26,8 @@ export default function Contact() {
               hover:bg-[#1a1a1a]
               transition-all duration-300
               flex items-center gap-3
+              px-8 py-4 rounded-full
             "
-            style={{
-              padding: "16px 32px",
-              borderRadius: "999px",
-            }}
           >
             hello@joey.co
             <ArrowUpRight
