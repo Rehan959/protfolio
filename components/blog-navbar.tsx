@@ -51,17 +51,6 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Helper to check if a route is active (handles hash links & blog routes)
-  const isActive = (href: string) => {
-    if (href.startsWith("#")) {
-      return false; // Hash links never match pathname
-    }
-    if (href === "/") {
-      return pathname === "/";
-    }
-    return pathname.startsWith(href);
-  };
-
   return (
     <>
       {/* Desktop Navigation */}
@@ -70,7 +59,7 @@ export function Navbar() {
           className="flex items-center gap-4 bg-[#111111] px-4 py-2 rounded-full"
         >
           {navItems.map((item) => {
-            const isItemActive = isActive(item.href);
+            const isActive = pathname === item.href;
 
             return (
               <Link
@@ -78,7 +67,7 @@ export function Navbar() {
                 href={item.href}
                 className={cn(
                   "relative flex items-center rounded-full px-4 py-2 text-sm font-medium transition",
-                  isItemActive
+                  isActive
                     ? "bg-white text-black"
                     : "text-[#A1A1AA] hover:text-white hover:bg-white/10"
                 )}
@@ -109,7 +98,7 @@ export function Navbar() {
           <SheetContent side="right" className="bg-[#000000] border-[#222222] pt-12">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => {
-                const isItemActive = isActive(item.href);
+                const isActive = pathname === item.href;
 
                 return (
                   <Link
@@ -118,7 +107,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium transition",
-                      isItemActive
+                      isActive
                         ? "bg-white text-black"
                         : "text-[#A1A1AA] hover:text-white hover:bg-white/10"
                     )}

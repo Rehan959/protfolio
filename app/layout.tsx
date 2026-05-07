@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import {ThemeProvider} from "next-themes";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import { Navbar } from "@/components/navbar";
-import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,14 +27,9 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         <ThemeProvider defaultTheme="system" attribute="class" enableSystem>
-          <h1
-            className="fixed top-6 left-6 z-50 text-xl font-semibold tracking-tight font-[family-name:var(--font-inter)] hover:opacity-80 transition-opacity"
-          >
-            Rehan
-          </h1>
-          <Navbar/>
+          <Navbar />
           {children}
-          <Footer/>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
