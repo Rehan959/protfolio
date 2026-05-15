@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {ThemeProvider} from "next-themes";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
+import { MouseInvertCursor } from "@/components/MouseInvertCursor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,10 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased cursor-none`}
       >
         <ThemeProvider defaultTheme="system" attribute="class" enableSystem>
+          <MouseInvertCursor />
           <Navbar />
           {children}
           <Footer />
